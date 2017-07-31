@@ -5,9 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+
 //import com.example.administrator.l_mvp.di.component.DaggerBaseComponent;
 import com.example.administrator.l_mvp.di.component.DaggerBaseComponent;
 import com.example.administrator.l_mvp.di.module.AppModule;
+import com.example.administrator.l_mvp.di.module.ClientModule;
 
 import java.util.LinkedList;
 
@@ -22,6 +24,7 @@ public class BaseApplication extends Application {
 
     static private BaseApplication mApplication;
     private AppModule mAppModule;
+    private ClientModule mClientModule;
     @Inject
     protected AppManager mAppManager;
     @Inject
@@ -38,6 +41,7 @@ public class BaseApplication extends Application {
                 .appModule(mAppModule)
                 .build()
                 .inject(this);
+        this.mClientModule = new ClientModule(mAppManager);
         registerActivityLifecycleCallbacks(mActivityLifecycle);
 
     }
@@ -48,6 +52,10 @@ public class BaseApplication extends Application {
 
     public AppManager getAppManager() {
         return mAppManager;
+    }
+
+    public ClientModule getClientModule() {
+        return mClientModule;
     }
 
 }

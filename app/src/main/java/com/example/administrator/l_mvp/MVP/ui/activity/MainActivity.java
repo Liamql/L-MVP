@@ -14,6 +14,7 @@ import com.example.administrator.l_mvp.app.base.BaseActivity;
 import com.example.administrator.l_mvp.R;
 import com.example.administrator.l_mvp.app.base.LActivity;
 import com.example.administrator.l_mvp.di.component.AppComponent;
+//import com.example.administrator.l_mvp.di.component.DaggerUserComponent;
 import com.example.administrator.l_mvp.di.component.DaggerUserComponent;
 import com.example.administrator.l_mvp.di.module.UserModule;
 

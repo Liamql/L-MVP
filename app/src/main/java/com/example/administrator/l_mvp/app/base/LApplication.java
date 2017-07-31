@@ -10,6 +10,7 @@ import com.example.administrator.l_mvp.R;
 import com.example.administrator.l_mvp.di.component.AppComponent;
 import com.example.administrator.l_mvp.di.component.DaggerAppComponent;
 //import com.example.administrator.l_mvp.di.component.DaggerAppComponent;
+//import com.example.administrator.l_mvp.di.component.DaggerAppComponent;
 
 import butterknife.ButterKnife;
 
@@ -27,6 +28,7 @@ public class LApplication extends BaseApplication {
         mAppComponent = DaggerAppComponent
                 .builder()
                 .appModule(getAppModule())//baseApplication提供
+                .clientModule(getClientModule())//baseApplication提供
                 .build();
     }
 
