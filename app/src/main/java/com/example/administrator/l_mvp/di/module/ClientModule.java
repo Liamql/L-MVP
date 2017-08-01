@@ -1,6 +1,7 @@
 package com.example.administrator.l_mvp.di.module;
 
 import com.example.administrator.l_mvp.app.base.AppManager;
+import com.example.administrator.l_mvp.app.base.BaseUrl;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -22,6 +23,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ClientModule
 {
     private AppManager mAppManager;
+    private HttpUrl mApiUrl;
+    private BaseUrl mBaseUrl;
     private static final int TIME_OUT = 10;
 
     public ClientModule(AppManager appManager) {
@@ -68,5 +71,15 @@ public class ClientModule
         return new OkHttpClient.Builder();
     }
 
-
+    @Singleton
+    @Provides
+    HttpUrl provideBaseUrl() {
+        if (mBaseUrl != null) {
+            HttpUrl httpUrl = mBaseUrl.url();
+            if (httpUrl != null) {
+                return httpUrl;
+            }
+        }
+        return mApiUrl == null ? HttpUrl.parse("https://api.seniverse.com") : mApiUrl;
+    }
 }

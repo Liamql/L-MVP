@@ -1,11 +1,19 @@
 package com.example.administrator.l_mvp.MVP.presenter;
 
 import android.app.Application;
+import android.os.Handler;
+import android.os.Message;
 
 import com.example.administrator.l_mvp.MVP.contract.CityContract;
+import com.example.administrator.l_mvp.MVP.model.City;
+import com.example.administrator.l_mvp.MVP.model.service.CityService;
 import com.example.administrator.l_mvp.app.base.AppManager;
 
 import javax.inject.Inject;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Administrator on 2017/8/1 0001.
@@ -24,9 +32,22 @@ public class CityPresenter extends BasePresenter<CityContract.Model,CityContract
         this.mAppManager = appManager;
     }
 
+    Handler mHandler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what)
+            {
+                case 1:
+                    mRootView.showCity(msg.obj.toString());
+                    break;
+            }
+        }
+    };
+
     public void showCity()
     {
-        String str = mModel.getCity();
-        mRootView.showCity(str);
+        mModel.getCity(mHandler);
     }
 }

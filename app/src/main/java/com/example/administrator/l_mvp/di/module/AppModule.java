@@ -3,6 +3,8 @@ package com.example.administrator.l_mvp.di.module;
 import android.app.Application;
 
 import com.example.administrator.l_mvp.app.base.BaseActivity;
+import com.example.administrator.l_mvp.app.base.IRepositoryManager;
+import com.example.administrator.l_mvp.app.base.RepositoryManager;
 
 import java.util.LinkedList;
 
@@ -26,6 +28,12 @@ public class AppModule {
     @Provides
     public Application provideApplication() {
         return mApplication;
+    }
+
+    @Singleton
+    @Provides
+    public IRepositoryManager provideRepositoryManager(RepositoryManager repositoryManager) {
+        return repositoryManager;
     }
 
 }
