@@ -2,14 +2,8 @@ package com.example.administrator.l_mvp.MVP.contract;
 
 import android.os.Handler;
 
-import com.example.administrator.l_mvp.MVP.model.City;
 import com.example.administrator.l_mvp.MVP.model.IModel;
-import com.example.administrator.l_mvp.MVP.model.User;
 import com.example.administrator.l_mvp.MVP.ui.IView;
-
-import java.util.List;
-
-import retrofit2.Call;
 
 /**
  * Created by Administrator on 2017/8/1 0001.

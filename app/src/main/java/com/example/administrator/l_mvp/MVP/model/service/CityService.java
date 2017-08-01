@@ -1,6 +1,6 @@
 package com.example.administrator.l_mvp.MVP.model.service;
 
-import com.example.administrator.l_mvp.MVP.model.City;
+import com.example.administrator.l_mvp.MVP.model.entity.City;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

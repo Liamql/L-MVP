@@ -1,9 +1,7 @@
 package com.example.administrator.l_mvp.di.module;
 
 import com.example.administrator.l_mvp.MVP.contract.CityContract;
-import com.example.administrator.l_mvp.MVP.contract.UserContract;
 import com.example.administrator.l_mvp.MVP.model.CityModel;
-import com.example.administrator.l_mvp.MVP.model.UserModel;
 
 import dagger.Module;
 import dagger.Provides;

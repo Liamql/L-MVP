@@ -1,4 +1,4 @@
-package com.example.administrator.l_mvp.MVP.model;
+package com.example.administrator.l_mvp.MVP.model.entity;
 
 /**
  * Created by Administrator on 2017/7/29 0029.

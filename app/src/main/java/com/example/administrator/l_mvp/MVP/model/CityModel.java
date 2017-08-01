@@ -2,9 +2,9 @@ package com.example.administrator.l_mvp.MVP.model;
 
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 import com.example.administrator.l_mvp.MVP.contract.CityContract;
+import com.example.administrator.l_mvp.MVP.model.entity.City;
 import com.example.administrator.l_mvp.MVP.model.service.CityService;
 import com.example.administrator.l_mvp.app.base.IRepositoryManager;
 

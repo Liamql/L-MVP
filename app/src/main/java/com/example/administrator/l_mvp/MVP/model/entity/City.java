@@ -1,4 +1,4 @@
-package com.example.administrator.l_mvp.MVP.model;
+package com.example.administrator.l_mvp.MVP.model.entity;
 
 import java.util.List;
 
