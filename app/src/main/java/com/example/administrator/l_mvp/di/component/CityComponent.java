@@ -1,7 +1,8 @@
 package com.example.administrator.l_mvp.di.component;
 
 import com.example.administrator.l_mvp.MVP.ui.activity.CityActivity;
-import com.example.administrator.l_mvp.di.module.CityModule;
+import com.example.administrator.l_mvp.di.component.AppComponent;
+import com.example.administrator.l_mvp.di.module.demo.CityModule;
 import com.example.administrator.l_mvp.di.scope.ActivityScope;
 
 import dagger.Component;

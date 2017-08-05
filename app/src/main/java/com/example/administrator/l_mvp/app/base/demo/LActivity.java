@@ -1,9 +1,7 @@
-package com.example.administrator.l_mvp.app.base;
-
-import android.os.Bundle;
-import android.support.annotation.Nullable;
+package com.example.administrator.l_mvp.app.base.demo;
 
 import com.example.administrator.l_mvp.MVP.presenter.IPresenter;
+import com.example.administrator.l_mvp.app.base.BaseActivity;
 import com.example.administrator.l_mvp.di.component.AppComponent;
 
 /**

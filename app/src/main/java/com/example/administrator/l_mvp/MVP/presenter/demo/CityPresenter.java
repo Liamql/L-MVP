@@ -1,10 +1,11 @@
-package com.example.administrator.l_mvp.MVP.presenter;
+package com.example.administrator.l_mvp.MVP.presenter.demo;
 
 import android.app.Application;
 import android.os.Handler;
 import android.os.Message;
 
 import com.example.administrator.l_mvp.MVP.contract.CityContract;
+import com.example.administrator.l_mvp.MVP.presenter.BasePresenter;
 import com.example.administrator.l_mvp.app.base.AppManager;
 
 import javax.inject.Inject;

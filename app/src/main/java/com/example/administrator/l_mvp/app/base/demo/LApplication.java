@@ -1,4 +1,4 @@
-package com.example.administrator.l_mvp.app.base;
+package com.example.administrator.l_mvp.app.base.demo;
 
 import android.app.Activity;
 import android.app.Application;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.example.administrator.l_mvp.R;
+import com.example.administrator.l_mvp.app.base.BaseApplication;
 import com.example.administrator.l_mvp.di.component.AppComponent;
 import com.example.administrator.l_mvp.di.component.DaggerAppComponent;
 //import com.example.administrator.l_mvp.di.component.DaggerAppComponent;

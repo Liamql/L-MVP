@@ -5,12 +5,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.l_mvp.MVP.contract.CityContract;
-import com.example.administrator.l_mvp.MVP.presenter.CityPresenter;
+import com.example.administrator.l_mvp.MVP.presenter.demo.CityPresenter;
 import com.example.administrator.l_mvp.R;
-import com.example.administrator.l_mvp.app.base.LActivity;
+import com.example.administrator.l_mvp.app.base.demo.LActivity;
 import com.example.administrator.l_mvp.di.component.AppComponent;
 import com.example.administrator.l_mvp.di.component.DaggerCityComponent;
-import com.example.administrator.l_mvp.di.module.CityModule;
+import com.example.administrator.l_mvp.di.module.demo.CityModule;
 
 import butterknife.BindView;
 
