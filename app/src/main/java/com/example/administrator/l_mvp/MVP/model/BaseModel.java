@@ -12,4 +12,9 @@ public class BaseModel implements IModel {
         this.mRepositoryManager = repositoryManager;
     }
 
+    @Override
+    public void onDestroy() {
+        mRepositoryManager = null;
+    }
+
 }

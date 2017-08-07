@@ -20,4 +20,12 @@ public class BasePresenter<M extends IModel, V extends IView> implements IPresen
         this.mRootView = rootView;
     }
 
+    @Override
+    public void onDestroy() {
+        if (mModel != null)
+            mModel.onDestroy();
+        this.mModel = null;
+        this.mRootView = null;
+    }
+
 }

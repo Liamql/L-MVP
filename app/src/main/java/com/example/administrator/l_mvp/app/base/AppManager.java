@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Intent;
 import android.util.Log;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -102,6 +103,45 @@ public class AppManager {
                 mActivityList.remove(activity);
             }
         }
+    }
+
+    /**
+     * 释放资源
+     */
+    public void release() {
+        mActivityList.clear();
+        mActivityList = null;
+        mCurrentActivity = null;
+        mApplication = null;
+    }
+
+    /**
+     * 关闭所有activity
+     */
+    public void killAll() {
+//        while (getActivityList().size() != 0) { //此方法只能兼容LinkedList
+//            getActivityList().remove(0).finish();
+//        }
+
+        Iterator<Activity> iterator = getActivityList().iterator();
+        while (iterator.hasNext()) {
+            Activity next = iterator.next();
+            iterator.remove();
+            next.finish();
+        }
+
+    }
+
+    /**
+     * 返回一个存储所有未销毁的activity的集合
+     *
+     * @return
+     */
+    public List<Activity> getActivityList() {
+        if (mActivityList == null) {
+            mActivityList = new LinkedList<>();
+        }
+        return mActivityList;
     }
 
 
